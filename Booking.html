@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<video width="320" height="240" controls autoplay muted>
+  <!-- <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"> -->
+  <source src="./videos/movie.mp4" type="video/mp4">
+
+</video>
+<audio controls autoplay muted>
+    
+    <source src="./audio/horse (1).ogg" type="audio/ogg">
+  
+  </audio>
+    <center><h1>Book flights here</h1></center>
+    <a href="index.html" target="_blank">Home</a>
+    <br>
+    <h2>Enter details to book flights</h2>
+    <form method="GET" action="print.html">
+        <table bgcolor="blue">
+            <tr>
+                <td><label for='Title'>Country:</label></td>
+                <td><select name="Title" id="Title" style="width:170px; height:25px">
+                    <option value="India">India</option>
+                 <option value="Australia">Australia</option>
+                 <option value="England">England</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for='upload'>upload:</label>
+                </td>
+                <td> <input type="file" name="file" accept="image/*"></td>
+            </tr>
+        <tr>
+        <td><label for="First Name">First Name:</label></td>
+        <td><input type="text" id = "firstName"> <br></td>
+        </tr>
+        <tr>
+            <td><label for='Title'> Salutation:</label></td>
+                <td><select name="Title" id="Title" style="width:170px; height:25px">
+                    <option value="Mr">Mr</option>
+                 <option value="Mrs">Mrs</option>
+                
+                </select></td>
+        </tr>
+        <tr>
+        <td><label for="Second Name">Second Name:</label></td>
+        <td><input type="text" id = "lastName"><br><td>
+            </tr>
+            <tr>
+        <td><label for="Gender">Gender:</label></td>
+        <td> <input type="Radio" id="Male" name="Gender">Male</td>
+        <td> <input type="Radio" id="Female" name="Gender">Female</td>
+<td><label for="Male"></label></td>
+
+            </tr>
+        <tr><td><label for="Email">Email:</label></td>
+        <td><input type="text"><br></td></tr>
+        <tr>
+            <td>
+        <label for="Phone">Phone:</label></td>
+        <td><input type="text"><br></td></tr>
+        <tr><td><label for="Age">Age:</label></td>
+        <td><input type="text"><br></td></tr>
+        <tr>
+
+            <td>
+                <label for="dob">Date of birth:</label></td>
+                <td><input type="date"><br></td></tr>
+
+                <tr>
+
+                    <td>
+                        <label for="address">Address:</label></td>
+                        <td><textarea rows="6" cols="20" ID = "address"></textarea><br></td></tr>
+                        <tr>
+                            <td><label for="Contact">can we contact you?  </label></td>
+                            <td><input type="Radio" id="Yes" name="Contact" value="1"/> Yes</td>
+                            <td><input type="Radio" id="No" name="Contact" value="1"/> No</td>
+                        </tr>
+                        <tr>
+                            <td><label for="Communication">Communication Preference </label></td>
+                            <td><input id="Email" type="checkbox"/>Email</td>
+                            <td><input id="Phone" type="checkbox"/>Phone</td>
+                        </tr>
+                        
+            
+                        
+        <tr>
+            <td><input id="terms" type="checkbox"/> I agree to the <a href="https://www.google.com" target="_blank">terms and conditions</a> of the websites</td></tr>
+            <tr><td> <input type="submit" onclick="saveData();" id="submit" name="submit" value="submit"/></td>
+            <td> <input type="reset" id="reset" name="reset" value="reset"/></td>
+        </tr>
+    </table>
+    </form>
+    <script>
+        function saveData(){
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var address = document.getElementById('address').value;
+            // alert('firstName'+'firstName');
+            var formData={
+               
+            }
+            formData.firstName = firstName;
+            formData.lastName = lastName;
+            formData.address = address;
+        console.log(formData);
+        localStorage.setItem('formData', JSON.stringify(formData));
+        
+            
+            
+            
+        }
+    </script>
+ 
+</body>
+</html>

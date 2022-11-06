@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .index{
+            postion: relative;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+        }
+        .index1{
+            postion: relative;
+            left: 0px;
+            top: 0px;
+            z-index: 2;   
+        }
+        .index2{
+            postion: relative;
+            left: 0px;
+            top: 0px;
+            z-index: 3;    
+        }
+        .anothercontainer-div{
+            height: 800px;
+            padding: 20px;
+        }
+
+        a:link{
+            color:brown;
+            font-weight: bold;
+
+
+        }
+        a:visited{
+            color:rgb(13, 213, 106);
+        }
+        a:hover{
+            color: black;
+        }
+        .anothercontainer-div:hover{
+            background-color: aqua;
+        }
+        @media print{
+            body{font-size: 10px;}
+        }
+        @media screen {
+            body{font-size: 12px;}
+        }
+        @media screen,print{
+            body{line-height: 1.2;}
+        }
+
+            
+        
+    </style>
+
+    <link rel="stylesheet" href="newstyle.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(13, 213, 106) ;">
+    <div class="container">
+        <div class="left">
+            <div class="index1">
+Experion technologies private limited,infopark,kakkanad,ernakulam,kerala,india.
+    </div></div>
+    
+        <div class="right">
+            <div class="index">
+            Experion technologies private limited,infopark,kakkanad,ernakulam,kerala,india.
+    </div></div>
+    <div class="anothercontainer">
+        <div class="index2">
+       <a href="print.html">Experion technologies private limited,infopark,kakkanad,ernakulam,kerala,india.</a>
+    </div></div>
+    
+</body>
+</html>

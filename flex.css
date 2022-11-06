@@ -1,0 +1,28 @@
+
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+    div{
+    border: 1px solid black;
+    height: 100px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: aqua;
+    height: 97vh;
+    
+}
+.item{
+    width: 30%;
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    background-color: white;
+    flex-grow: 2;
+}
